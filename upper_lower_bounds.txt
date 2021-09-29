@@ -1,0 +1,15 @@
+public class Main {
+
+    public static void main(String args[]) {
+        int max=400;
+        int min=200;
+        int upperBound = 500;
+        int lowerBound = 100;
+        int result=(int)(Math.random()*(max-min)+min);
+        double number = lowerBound +  (Math.random() * ((upperBound - lowerBound) + 1));
+        System.out.println("Random number of type double from"+max+"to" +min+"is");
+        System.out.println(number);
+        System.out.println("Random number of type int from"+lowerBound+"to" +upperBound+"is");
+        System.out.println(result);
+    }
+}
