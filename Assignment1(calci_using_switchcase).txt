@@ -1,4 +1,4 @@
-//simple calculator
+
 package com.company;
         import java.util.*;
         import java.util.Scanner;
@@ -7,12 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-                // Declare variables
+              
                 double num1=0.0, num2=0.0,num3=0.0,num4=0.0;
                 char operator='\0';
 
-                // create Scanner class object to
-                // read inputs
+              
                 Scanner scan = new Scanner(System.in);
                 System.out.print("Enter numbers: ");
                 num1 = scan.nextDouble();
@@ -20,46 +19,32 @@ public class Main {
                 num3 = scan.nextDouble();
                 num4 = scan.nextDouble();
 
-
-                // read operator
                 System.out.println("Available Operators"
                         + "are::  (+ - * / % ^)");
                 System.out.print("Enter operator: ");
                 operator = scan.next().charAt(0);
-
-                // switch-case statements
+                
                 switch(operator) {
 
                     case '+':
-                        System.out.println("Result = "+ (num1+num2+num3+num4));
+                        System.out.println("Result of addtion = "+ (num1+num2+num3+num4));
                         break;
 
                     case '-':
-                        System.out.println("Result = "+ (num1-num2-num3-num4));
+                        System.out.println("Result of subtraction = "+ (num1-num2-num3-num4));
                         break;
 
                     case '*':
-                        System.out.println("Result = "+ (num1*num2*num3*num4));
+                        System.out.println("Result if multiplication = "+ (num1*num2*num3*num4));
                         break;
 
                     case '/':
-                        System.out.println("Result = "+ (num1/num2));
-                        break;
-
-                    case '%':
-                        System.out.println("Result = "+ (num1%num2));
-                        break;
-
-                    case '^':
-                        System.out.println("Result = "+
-                                Math.pow(num1,num2));
+                        System.out.println("Quoitent is = "+ (num1/num2));
                         break;
 
                     default:
-                        System.out.println("Invalid operator");
-                } // end of switch-case
-
-                // close Scanner class object
+                        System.out.println("Wrong option,Choose another option");
+            }
                 scan.close();
 
             }
