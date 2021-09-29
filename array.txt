@@ -1,0 +1,82 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    static String[] names = new String[5];
+    static int n;
+    static int temp=0;
+    public static void input(){
+        System.out.println("Enter the number of elements that you want to input");
+        Scanner sc = new Scanner(System.in);
+        n=sc.nextInt();
+        n=n+temp;
+        for(int i = temp; i<n;i++){
+            names[i] = sc.next();
+            temp=i;
+        }
+        temp=temp+1;
+        System.out.println("Insertion Successful");
+
+    }
+    public static void output(){
+        if(n==0){
+            System.out.println("ARRAY is Empty");
+        }
+        else{
+            for(int i =0;i<n;i++){
+                System.out.println(names[i]);
+            }
+        }
+    }
+    public static void search(){
+        System.out.println("Enter the key");
+        Scanner sc  = new Scanner(System.in);
+        String key = sc.nextLine();
+        int i = 0;
+        for(i = 0;i< n;i++){
+            //System.out.println(names[i].equals(key));
+            if(names[i].equals(key)){
+                System.out.println("The name you're searching is found at "+(i+1)+"th position");
+            }
+        }
+
+
+    }
+    public static void update(){
+        System.out.println("Enter the name you want to update");
+        Scanner sc  = new Scanner(System.in);
+        String key = sc.next();
+        int i = 0;
+        for(i = 0;i< n;i++){
+            if(names[i].equals(key)){
+                System.out.println("Enter the new name");
+                String newname = sc.next();
+                names[i] = newname;
+                System.out.println("Updation successful");
+            }
+        }
+
+    }
+    public static void main(String[] args){
+        while(true){
+            System.out.println("Enter the options. We are trying array operations");
+            System.out.println("1)Input\n2)Output\n3)Search\n4)Update\n5)Exit");
+            Scanner sc = new Scanner(System.in);
+            int c = sc.nextInt();
+            switch(c){
+                case 1: input();
+                    break;
+                case 2: output();
+                    break;
+                case 3: search();
+                    break;
+                case 4:update();
+                    break;
+                case 5:System.exit(0);
+                default:System.out.println("Wrong input");
+            }
+
+
+        }
+    }
+}
