@@ -1,0 +1,145 @@
+//main.java
+
+package com.company ;
+
+import java.util.Scanner;
+
+public class Main {
+
+        public static void main(String[] args) {
+                cal cal1 = new cal();
+                double num1 = 0.0;
+                double num2 = 0.0;
+                while (true) {
+                        System.out.println("Calculator\n Select the options");
+                        System.out.println("1)Add\n2)Sub\n3)Mul\n4)Div\n5)oddorEven\n6)Prime\n7)Sqr\n8)Exit");
+                        Scanner sc = new Scanner(System.in);
+                        int c = sc.nextInt();
+                        switch (c) {
+                                case 1:
+                                        cal1.add();
+                                        break;
+                                case 2:
+                                        cal1.sub();
+                                        break;
+                                case 3:
+                                        cal1.mul();
+                                        break;
+                                case 4:
+                                        cal1.div();
+                                        break;
+                                case 5:
+                                        cal1.odd_even();
+                                        break;
+                                case 6:
+                                        cal1.prime();
+                                        break;
+                                case 7:
+                                        cal1.sqr();
+                                        break;
+                                case 8:
+                                        System.exit(0);
+                                default:
+                                        System.out.println("Wrong input, choose another option");
+                        }
+                }
+        }
+}
+
+//calci.java
+
+package com.company;
+import java.util.Scanner;
+
+public class calci {
+    double num1=0.0;
+    double num2=0.0;
+    double result=0.0;
+    Scanner ip = new Scanner(System.in);
+
+
+    public double add (){
+        System.out.println("enter the two number");
+        num1 = ip.nextDouble();
+        num2 = ip.nextDouble();
+        result= num1+num2;
+        System.out.println(result);
+        return result;
+    }
+    public double sub (){
+        System.out.println("enter the two number");
+        num1 = ip.nextDouble();
+        num2 = ip.nextDouble();
+        result= num1-num2;
+        System.out.println(result);
+        return result;
+    }
+    public double mul(){
+        System.out.println("enter the two number");
+        num1 = ip.nextDouble();
+        num2 = ip.nextDouble();
+        result= num1*num2;
+        System.out.println(result);
+        return result;
+    }
+    public double div (){
+        System.out.println("enter the two number");
+        num1 = ip.nextDouble();
+        num2 = ip.nextDouble();
+        result= num1/num2;
+        System.out.println(result);
+        return result;
+    }
+}
+
+//cal
+
+package com.company;
+import static  java.lang.Math.*;
+import java.util.Scanner;
+
+public class cal extends calci{
+    double num1=0.0;
+    double sum=0.0;
+    Scanner scan = new Scanner(System.in);
+
+
+    public double odd_even() {
+        System.out.println("enter the a number");
+        num1 = scan.nextDouble();
+        if (num1 % 2 == 0) {
+            System.out.println("Entered number is even"); }
+
+        else {
+            System.out.println("Entered number is odd");
+            return sum;
+        }
+        return sum;
+    }
+    public double prime () {
+        System.out.println("enter a number number");
+        num1 = scan.nextDouble();
+        boolean flag = false;
+        for (int i = 2; i <= num1 / 2; ++i) {
+            if (num1 % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(num1 + " is a prime number.");
+        else
+            System.out.println(num1 + " is not a prime number.");
+
+        return sum;
+    }
+    public double sqr(){
+        System.out.println("enter a  number");
+        num1 = scan.nextDouble();
+
+
+        System.out.println(num1*num1);
+        return sum;
+    }
+}
