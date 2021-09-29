@@ -1,7 +1,6 @@
 
 package com.company;
         import java.util.*;
-        import java.util.Scanner;
 
 public class Main {
 
@@ -9,20 +8,15 @@ public class Main {
 
               
                 double num1=0.0, num2=0.0,num3=0.0,num4=0.0;
-                char operator='\0';
-
-              
-                Scanner scan = new Scanner(System.in);
+    
+                Scanner input = new Scanner(System.in);
                 System.out.print("Enter numbers: ");
-                num1 = scan.nextDouble();
-                num2 = scan.nextDouble();
-                num3 = scan.nextDouble();
-                num4 = scan.nextDouble();
-
-                System.out.println("Available Operators"
-                        + "are::  (+ - * / % ^)");
-                System.out.print("Enter operator: ");
-                operator = scan.next().charAt(0);
+                num1 = input.nextDouble();
+                num2 = input.nextDouble();
+                num3 = input.nextDouble();
+                num4 = input.nextDouble();
+                
+                System.out.print("Enter an option to perform an operation ")
                 
                 switch(operator) {
 
@@ -45,7 +39,6 @@ public class Main {
                     default:
                         System.out.println("Wrong option,Choose another option");
             }
-                scan.close();
 
             }
         }
