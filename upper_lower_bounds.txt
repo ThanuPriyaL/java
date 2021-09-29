@@ -1,0 +1,17 @@
+package com.company;
+import  java.awt.*;
+
+import java.util.Arrays;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+
+
+        int upperBound = 400;
+        int lowerBound = 100;
+        int number = lowerBound + (int) (Math.random() * ((upperBound - lowerBound) + 1));
+        System.out.println(number);
+  }
+}
