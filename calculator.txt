@@ -1,0 +1,145 @@
+package com.company;
+import java.util.*;
+public class Main{
+        public static void main(String[] args) {
+
+                cal c=new cal();
+                int a=0;
+                int b=0;
+                while(true)
+                {
+                        System.out.println("select the options: ");
+                        System.out.println("1.add\n 2.sub\n3.mul\n 4.div\n 5.oddoreven\n 6.prime\n 7.square\n8.Exit");
+                        Scanner sc = new Scanner(System.in);
+                        int d = sc.nextInt();
+                        switch (d) {
+                                case 1:
+                                        c.add();
+                                        break;
+                                case 2:
+                                        c.sub();
+                                        break;
+                                case 3:
+                                        c.mul();
+                                        break;
+                                case 4:
+                                        c.div();
+                                        break;
+                                case 5:
+                                        c.oddoreven();
+                                        break;
+                                case 6:
+                                        c.prime();
+                                        break;
+                                case 7:
+                                        c.square();
+                                        break;
+                                case 8:
+                                        System.exit(0);
+                                default:
+                                        System.out.println("enter correct input");
+                        }
+                }
+
+        }
+}
+
+//calculator
+
+package com.company;
+import java.util.*;
+
+public class calci{
+    Scanner sc=new Scanner(System.in);
+    int a=0;
+    int b=0;
+    public void add()
+    {
+        System.out.println("enter input1:");
+        a=sc.nextInt();
+        System.out.println("enter input2:");
+        b=sc.nextInt();
+        System.out.println(a+b);
+    }
+    public void sub()
+    {
+        System.out.println("enter input1:");
+        a=sc.nextInt();
+        System.out.println("enter input2:");
+        b=sc.nextInt();
+        System.out.println(a-b);
+    }
+    public void mul()
+    {
+        System.out.println("enter input1:");
+        a=sc.nextInt();
+        System.out.println("enter input2:");
+        b=sc.nextInt();
+        System.out.println(a*b);
+    }
+    public void div()
+    {
+        System.out.println("enter input1:");
+        a=sc.nextInt();
+        System.out.println("enter input2:");
+        b=sc.nextInt();
+        System.out.println(a/b);
+    }
+}
+
+
+//extcal
+
+package com.company;
+
+import java.sql.SQLOutput;
+import java.util.*;
+
+public class cal extends calci {
+    int a=0;
+    int b=0;
+    Scanner sc=new Scanner(System.in);
+    //square
+    public void square()
+    {
+        System.out.println("enter the number:");
+        a=sc.nextInt();
+        int s=a*a;
+        System.out.println(s);
+    }
+    //prime
+    public void prime() {
+        // Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        a = sc.nextInt();
+        boolean flag = false;
+        for (int i = 2; i <= a / 2; i++) {
+            if (a % i == 0) {
+                flag = true;
+                break;
+            }
+
+        }
+        if (!flag) {
+            System.out.println(a + "is a prime number");
+        } else {
+            System.out.println(a + "is not a prime number");
+        }
+    }
+
+    //oddoreven
+    public void oddoreven()
+    {
+        //Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        a=sc.nextInt();
+        if(a%2==0)
+        {
+            System.out.println(+a+ " is even number:");
+        }
+        else
+        {
+            System.out.println(+a+ " is odd number:");
+        }
+    }
+}
