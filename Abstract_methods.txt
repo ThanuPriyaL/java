@@ -1,0 +1,56 @@
+package com.company;
+
+abstract class Car{
+    abstract void start();
+    abstract void stop();
+    abstract void brreak();
+}
+class Swift extends Car{
+    void design() {
+        System.out.println(" the design of  Swift Car has been upgraded");
+    }
+    void car_seat() {
+        System.out.println(" the design of  Swift Car seat is vegan");
+    }
+    void start(){
+        System.out.println("Swift Car Started");
+    }
+    void stop(){
+        System.out.println("Swift Car Stopped");
+    }
+    void brreak() {
+        System.out.println("Swift Car has applied Break");
+    }
+}
+class Bmw extends Car{
+    void design() {
+        System.out.println(" the design of BMW Car has been upgraded");
+    }
+    void car_seat() {
+        System.out.println(" the design of  BMW Car seat is synthetic leather");
+    }
+    void start(){
+        System.out.println("BMW Car Started");
+    }
+    void stop(){
+        System.out.println("BMW Car Stopped");
+    }
+    void brreak() {
+        System.out.println("BMW Car has applied Break");
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Car obj=new Bmw();
+        obj.start();
+        Bmw obj2 =new Bmw();
+        obj2.design();
+        Car obj1=new Swift();
+        obj1.stop();
+        obj1.brreak();
+        Swift obj3 =new Swift();
+        obj3.car_seat();
+
+
+    }
+}
