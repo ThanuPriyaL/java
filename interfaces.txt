@@ -1,0 +1,48 @@
+
+//Interface class
+package com.company;
+
+public interface Call {
+    public abstract void VoiceCall();
+    public abstract void VideoCall ();
+}
+
+//Interface Class
+package com.company;
+
+public interface Message {
+    public abstract void Sms();
+    public abstract void InternetSms();
+}
+
+//implementation 
+package com.company;
+
+public class Phone implements Call,Message{
+    public void VoiceCall(){
+        System.out.println("Hello,Connecting you on voice call");
+    }
+    public void VideoCall() {
+        System.out.println("Hello,Connecting you on video call");
+    }
+    public void Sms(){
+        System.out.println("Hello,Sending your messsage");
+    }
+    public void InternetSms() {
+        System.out.println("Hello,Sending your messsage on internet");
+    }
+}
+//Main
+package com.company;
+
+public class Main {
+    public static void main(String[]args)
+    {
+        Phone p=new Phone();
+        p.VoiceCall();
+        p.VideoCall();
+        p.Sms();
+        p.InternetSms();
+    }
+}
+
