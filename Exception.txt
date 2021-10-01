@@ -1,0 +1,36 @@
+//main
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Exception obj = new Exception();
+        obj.myarray();
+    }
+}
+
+//Exception
+package com.company;
+
+import java.util.Scanner;
+
+public class Exception {
+    public void myarray() {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int count = 0;
+        System.out.println("Enter the range");
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            for (int i = 0; i <= arr.length; i++) {
+                for (int j = i; j < arr.length - 1; j++) {
+                    System.out.println(arr[i] + "," + arr[j + 1]);
+                    count++;
+                }
+            }
+        } catch (ArrayIndexOutOfBoundsException exe) {
+            System.out.println("Out of Array limit");
+            exe.printStackTrace();
+        }
+    }
+}
