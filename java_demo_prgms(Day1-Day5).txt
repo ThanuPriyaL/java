@@ -1,0 +1,997 @@
+//Day1
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+        int age =21, height =65, x=90,y=100;
+        age= 30;
+        System.out.println(+age);
+--------------------------------------------------------------------------------------------  
+        variables
+        int myAge = 21;
+        int myFriendage = myAge;
+        System.out.println(+myFriendage);
+--------------------------------------------------------------------------------------------
+        public class{
+            int x=12;
+            System.out.println(+x);
+        public static void main(String[] args) {
+        int b=40; // instance variable;
+        System.out.println(m);
+         System.out.println(y); // error
+          System.out.println(b);
+
+---------------------------------------------------------------------------------------------
+
+package com.company;
+
+public class Main {
+
+    public static void main(String args[]){
+        byte age = 30;
+        int viewscount = 132735165;
+        long viewscounts = 132735165l;
+        double weight = 50.5;
+        float height = 60.0f;
+        char alpha = 's';
+        boolean id = true;
+        System.out.println(+age);
+        System.out.println(+viewscount);
+        System.out.println(+viewscounts);
+        System.out.println(+weight);
+        System.out.println(+height);
+        System.out.println(+alpha);
+        System.out.println();
+
+
+    }
+}
+----------------------------------------------------------------------------------------------------
+
+package com.company;
+import java.util.Date;
+
+public class Main {
+
+    public static void main(String args[]) {
+        byte age = 30;
+        Date now = new Date();
+        now.getTime();
+        System.out.println(now);
+
+    }
+}
+--------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        Point point1 = new Point(3, 1);
+        Point point2 = point1;
+        point1.x = 4;
+        System.out.println(point2);
+
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        //unary operator
+        int x=10;
+        int y=20;
+        System.out.println(x++); //10;
+        System.out.println(x);//11
+        System.out.println(++x);//12
+        System.out.println(x);//12
+        System.out.println(x--);//12
+        System.out.println(x);//11
+        System.out.println(--x); //10
+        System.out.println(x); // 10
+        System.out.println(x++ + ++y); // 10 +21
+        System.out.println(10*10/5+3-1*4/2); //Multiplication and divison first
+        System.out.println(((10*10)/5)+3-(1*(4/2))); //21
+    }
+}
+
+----------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        int x =20;
+        int y=10;
+        int z=30;
+        System.out.println(x<y && x<z); //false - logical and operation- in this only one condition is checked
+        System.out.println(x<y & x<z); //false- bitwise and operation- both condition is checked
+        System.out.println(x<y || x<z); //true - logical or operation-in this only one condition is checked
+        System.out.println(x<y | x<z); //false- bitwise or operation - both condition is checked
+        int max = (x<y)?x:y;
+        System.out.println(max); //ternary operator o/p-10
+        //assignment operator
+        //shift operator
+
+        //left shift operator : shifts all of bits values to the leftside for specified number of times
+
+
+        System.out.println(10<<2); //10*2^2 = 10*4= 40
+        System.out.println(20<<2); //20*2^2 = 80
+
+        //Right shift operator = shifts right
+
+        System.out.println(10>>2); //10/2^2 = 10/4= 2
+        System.out.println(20>>2); //20/2^2 = 20/4= 5
+
+       short s =20;
+       short r =20;
+
+
+
+
+ -------------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        String hi= new String("hello ");
+        String message= "hello Srinivas";
+        System.out.println(message);
+        System.out.println(hi);
+        //concatination
+        String messages= "hello Srinivas" + "How are you!!";
+        System.out.println(messages);
+        //methods
+        System.out.println(message.endsWith("s"));
+        System.out.println(message.toLowerCase(Locale.ROOT));
+        System.out.println(message.toUpperCase(Locale.ROOT));
+        System.out.println(message.length());
+        System.out.println(message.indexOf("S"));
+        System.out.println(message.startsWith("S"));
+
+
+    }
+
+    }
+ -------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+
+        //System.out.println("hello world,\"hi\"");
+        //System.out.println("c:Window\\filefolder\nsrinivas");
+
+}
+}
+-------------------------------------------------------------------------------------------------------------
+
+package com.company;
+import  java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        int [] numbers = new int[6]; // int [] numbers = {1,2,3,4,5};
+        numbers[0]=7;
+        numbers[1]=4;
+        numbers[2]=5;
+        numbers[3]=6;
+        numbers[4]=9;
+
+      //  numbers[10]=3; // error outofbound
+
+        System.out.println(numbers); //prints the array
+        System.out.println(Arrays.toString(numbers));
+        System.out.println(Array.getLength(numbers));
+        Arrays.sort(numbers);
+
+
+
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------
+2-D array
+
+package com.company;
+import  java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        int[][] numbers = new int[2][3]; // int [][] numbers = {{1,2,3},{4,5,6}};
+        numbers[0][0] = 7;
+        numbers[0][1] = 4;
+        numbers[0][2] = 5;
+        numbers[1][1] = 6;
+        numbers[1][2] = 9;
+
+
+        System.out.println(Arrays.deepToString(numbers));
+    }
+}
+-------------------------------------------------------------------------------------------------------------------
+
+package com.company;
+import  java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+    final float Pi = 3.145f; //cannnot be changed
+    //Constabt means " cannot be changed
+     // static means "static instance (in memory)
+
+    }
+
+}
+--------------------------------------------------------------------------------------------------------------------
+package com.company;
+import  java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Locale;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        // double result = (double) 20 + (double) 5;
+        //System.out.println(result);
+        // Implicit casting (automatic)
+       // short a = 2;
+        //int y = a + 2;
+        //byte> sort>int>....
+        //double a= 1.55;
+        //double y= a+2; // 2.0 +1.55
+        //byte> sort > int > long > float >double
+        //Explict Casting
+        //Explict and implict casying can only happen between compatible types
+        //double a= 1.55;
+        //int y= (int)a+2; // 2.0 +1.55 loss of data
+
+
+
+
+        System.out.println(y);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+package com.company;
+import  java.awt.*;
+
+import java.util.Arrays;
+
+
+public class Main {
+
+    public static void main(String args[]) {
+        int roundoff = Math.round(2.5f);
+        int ceiling = (int) Math.ceil(3.23f);
+        int floors = (int) Math.floor(7.39);
+        int maxs= (int) Math.max(9,7);
+        double rand= Math.random();
+        System.out.println(roundoff);
+        System.out.println(ceiling);
+        System.out.println(floors);
+        System.out.println(maxs); 
+        System.out.println(rand);
+
+    }
+}
+--------------------------------------------------------------------------------------------------------
+//Day2
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        System.out.println("hello");
+        System.out.println("enter your age:");
+        Scanner sc= new Scanner(System.in);
+        int age= sc.nextInt();
+        if(age>=18) {
+            System.out.println("Eligible to vote");
+        }
+        System.out.println("Not Eligible to vote");
+    }
+}
+---------------------------------------------------------------------------------------------------------------------
+
+//if Else statement
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        System.out.println("enter your age:");
+        Scanner sc= new Scanner(System.in);
+        int age= sc.nextInt();
+        System.out.println(age>=18);
+        if(age>=18) {
+            System.out.println("Eligible to vote");
+        }
+        else {
+            System.out.println("Not Eligible to vote");
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        System.out.println("enter your age:");
+        Scanner sc= new Scanner(System.in);
+        int age= sc.nextInt();
+        if(age>=18) {
+            System.out.println("Eligible to vote");
+        }
+        else if(age>=10){
+            System.out.println("Eligible for school , wait for 8years");
+        }
+        else {
+            System.out.println("Not Eligible to vote");
+        }
+    }
+}
+*/
+
+--------------------------------------------------------------------------------------------------------------
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        System.out.println("enter your age:");
+        Scanner sc= new Scanner(System.in);
+        int age= sc.nextInt();
+        if(age>=18) {
+            if(age<=22) {
+                System.out.println("Eligible to vote");
+            }
+            else {
+                System.out.println("Marraiage");
+            }
+        }
+        else if(age>=10){
+            System.out.println("Eligible for school voting");
+        }
+        else {
+            System.out.println("Not Eligible to vote");
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        System.out.println("enter your age:");
+        Scanner sc= new Scanner(System.in);
+        int age= sc.nextInt();
+        switch (age){
+            case 18:
+                System.out.println("Eligible to vote");
+                break;
+            case 22:
+                System.out.println("Eligible to marraiage");
+                break;
+            case 10:
+                System.out.println("not Eligible Go to school");
+                break;
+            default:
+                System.out.println("not Eligible");
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+//loop Statements
+
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        int age,i;
+        for( i=0;i<=5;i++) {
+            System.out.println("enter your age:");
+            Scanner sc = new Scanner(System.in);
+            age = sc.nextInt();
+        }
+
+
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------
+// while loop
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        int i=0;
+        while(i<5){
+            System.out.println("hello:");
+                   i++;
+        }
+
+
+    }
+}
+----------------------------------------------------------------------------------------------------------
+// Do while loop
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        System.out.println("hello");
+        int i=0;
+        do{
+
+            System.out.println("hello:");
+            i++;
+
+        }while (i<5);
+
+
+    }
+}
+---------------------------------------------------------------------------------------------------
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        for(int i=0;i<5;i++) {
+
+            System.out.println("hello");
+            break;
+
+        }
+
+    }
+}
+-------------------------------------------------------------------------------------------------------------
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        int [] array = new int[100];
+        //memory [memory block] 1000,1050
+
+
+    }
+}
+--------------------------------------------------------------------------------------------------------------------
+              
+package com.company;
+import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+       /* String name;
+        int age;
+        String Eid;
+        String company;
+        */
+        /*
+        static int number =0;
+        int age=0;
+        Main object1= new Main();
+        object1.number=1;
+        Main object2= new Main();
+        System.out.println(object2.number);
+
+        //Polymorphism : ability of an object to take many forms.
+        System.out.println(12);
+    }
+}
+------------------------------------------------------------------------------------------------
+//day3
+package com.company;
+
+import class Animal;
+
+public class Main {
+
+    public static void main(String[] args) {
+        New student= new New();
+        student.display();
+        System.out.println(student.name);
+        System.out.println(student.sid);
+        System.out.println("Hello and Welcome");
+        Animal an= new Animal();
+        cat c= new cat();
+        c.sound();
+        System.out.println(+c.num); */
+
+    }
+}
+--------------------------------------------
+public class cat extends Animal{
+    int num=100;
+    public void display(){
+        String name;
+        String sid;
+        eat();
+    System.out.println("cat says meow..meow..");
+}
+-------------------------------------------------------------------------------------------
+//Day4
+
+
+}
+
+------------------------------------
+package com.company;
+
+public class New extends cat{
+    String name;
+    String sid;
+    public New(){
+        name= "Thanu";
+        sid= "IS101";
+
+    }
+    public void display(){
+        System.out.println("Hello Everyone!!");
+        super.display("Priya","IS106");
+        this.name=name;
+        this.sid=sid;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------
+//Day4
+//hides the implentation details(abstract methods)
+abstract class Car{
+	abstract void start();
+	}
+	class Swift extends Car{
+		void start(){
+			System.out.println("Car Started");
+	}
+     }
+	public class Main{
+		public static void main(String args[]){
+		car obj=new Swift();
+		obj.start();
+		}
+	}
+----------------------------------------------------------------------------------------------------------------------
+package com.company;
+
+abstract class Car{
+    abstract void start();
+    abstract void stop();
+    abstract void brreak();
+}
+class Swift extends Car{
+    void design() {
+        System.out.println(" the design of  Swift Car has been upgraded");
+    }
+    void car_seat() {
+        System.out.println(" the design of  Swift Car seat is vegan");
+    }
+    void start(){
+        System.out.println("Swift Car Started");
+    }
+    void stop(){
+        System.out.println("Swift Car Stopped");
+    }
+    void brreak() {
+        System.out.println("Swift Car has applied Break");
+    }
+}
+class Bmw extends Car{
+    void design() {
+        System.out.println(" the design of BMW Car has been upgraded");
+    }
+    void car_seat() {
+        System.out.println(" the design of  BMW Car seat is synthetic leather");
+    }
+    void start(){
+        System.out.println("BMW Car Started");
+    }
+    void stop(){
+        System.out.println("BMW Car Stopped");
+    }
+    void brreak() {
+        System.out.println("BMW Car has applied Break");
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Car obj=new Bmw();
+        obj.start();
+        Bmw obj2 =new Bmw();
+        obj2.design();
+        Car obj1=new Swift();
+        obj1.stop();
+        obj1.brreak();
+        Swift obj3 =new Swift();
+        obj3.car_seat();
+        
+
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+//abstract classes havin implemetaion inside them.
+public abstract class Abstract{
+	abstract void start();
+	abstract void stop();
+	abstract void brreak();
+
+	public void basic_info(){
+		System.out.println("car has 4 wheels");
+		System.out.println("car has 4 windows");
+		System.out.println("car has 4 Doors");
+		}
+	}
+
+//extended class
+public class genral extends Abstract{
+
+	public void start(){}
+	public void stop(){}
+	public void brreak(){}
+	public void basic_info(){}	
+}
+-------------------------------------------------------------------------------
+//implementation in abstract classes
+public class abstract extends Abstract{
+
+	public void add();
+	public void sub();
+	public void mul();
+	public void div();
+
+	Scanner ip=new Scanner(System.in);
+
+	public int[] input(){
+		int[] array=new int[100];
+		System.out.println("enter the number");
+		for(int i=0;i<array.length;i++){
+		array[i]=ip.nextInt();
+	}
+	return array;
+}
+//overriding
+import java.util.*;
+public class genral extends Abstract{
+
+	Scanner ip=new Scanner(System.in);
+	public int[] input(){
+		System.out.println("enter the number");
+		array[0]=ip.nextInt();
+		System.out.println("enter the number");
+		array[0]=ip.nextInt();
+		return array;
+}
+
+	public void add(){}
+	public void sun(){}
+	public void mul(){}
+	public void div(){input();}	
+}
+public class Main{
+    public static void main(String args[]){
+        Abstract obj=new general();
+        obj.add();
+	Abstract obj1=new general();
+	obj1.sub();
+	Abstract obj2=new general();
+	obj2.mul();
+	Abstract obj3=new general();
+	obj3.div();
+	
+----------------------------------------------------------------
+//Interfaces
+
+public interface Students extends StudentsUpdates{
+	public abstract void name();
+	public abstract void id();
+	public abstract void collegename();
+	void branch();
+
+}
+//updating interface
+public interface StudentsUpdates{
+	public void marks();
+	public void sem();
+	public abstract void name();
+	
+}
+//keep holds or keeps track of information the needs to be implemented
+public class Student implements Students,StudentsUpdates{
+	public void name(){
+}
+	public void id(){
+}
+	public void collegename(){
+}
+	public void marks(){	
+}	
+	public void sem(){
+}
+}
+	
+}
+---------------------------------------------------------------------------------------------------------------------
+//passing args through command line
+
+public static void main(String[]args){
+	System.out.println("hello im Thanu");
+	System.out.println(args[0]);
+
+	add(a:2,b:4);
+}
+public static void add(int a,intb){
+
+}
+//passing values to main function(run obj file java filename.java and then filename java)
+----------------------------------------------------------------------------------------------------
+//Day5
+//Expection and Exception Handling
+
+//Exception
+public class Exception{
+	public static void show(){
+		sayHello(null);
+	}
+	public static void sayHello(String name){
+		system.out.println(name.toUpperCase());
+	}
+}
+//Main
+public class Main{
+	public static void main(String[] args){
+		Exception.show(){
+	}
+}	
+//throws error because we passed 'null' as a parameter and trying to convert null into upper case.
+so,exception occurs
+--------------------------------------------------------------------------------------------------------
+// check Exception 
+public class Exception{
+	public static void show(){
+		var reader = new FileReader(file.txt);
+	}
+}
+--------------------------------------------------------------
+// check Exception 
+public class Exception{
+	public static void show(){
+		var reader = new FileReader(file.txt);
+	}
+}
+-----------------------------------------------------------------------------------------------------------
+//Exception Handling
+package com.company;
+import java.io.FileNotFoundException ;
+import java.util.*;
+public class Exception{
+	public static void show(){
+	  try{
+		var reader = new FileReader("file.txt");
+		System.out.println("File Opened");
+	    }
+ 	  catch(FileNotFoundException exe){
+		System.out.println("File Does Not Exist");
+}		
+}
+}
+--------------------------------------------------------------------------------------------------------------
+//printing messsage
+import java.io.FileNotFoundException ;
+import java.util.*;
+public class Exception{
+	public static void show(){
+	  try{
+		var reader = new FileReader("file.txt");
+		var value:int=reader.read();
+	    }
+ 	  catch(FileNotFoundException exe){
+		IOException exe= FileNottFoundException();
+		System.out.println("Could not read the exception");
+	}	
+}		System.out.println("File Opened");
+
+}
+------------------------------------------------------------------------------------------------------------
+public class Exception{
+	public static void show(){
+	  try{
+		var reader = new FileReader("file.txt");
+		System.out.println("File Opened");
+	    }
+ 	  catch(FileNotFoundException exe){
+		e.printStackTrace();
+		System.out.println(exe.getMessage());
+	}	
+}
+}
+-------------------------------------------------------------------------------------------------------------
+//throw
+public class Demo{
+	public static void main(String[] args) throws ArrayIndexOutOfBound Exception{
+		int[] arr=new int[5];
+		System.out.println("hello");
+		System.out.println(arr[5]);
+		add(a:3,b:5);
+	}
+
+     public static void add(int a,int b){
+	
+}
+--------------------------------------------------------------------------------------------------------------
+//userDefinedException
+
+class userDefinedException extends Exception{
+	public userDefinedException(String msg){
+		super(msg);
+	}
+}
+
+public class Demo{
+	public static void main(String[] args){
+		int[] arr=new int[5];
+		System.out.println("hello");
+		
+		try{
+		System.out.println(arr[5]);
+		throw new userDefinedException(" this exception is user defined");
+		}
+		catch(userDefinedEXception ud){
+			System.out.println("ud.getMessage());
+		}
+		add(a:3,b:5)
+}
+     public static void add(int a,int b){
+	
+}
+------------------------------------------------------------------------------------------------------------------------
+//Wrapper class
+public class Wrapper{
+public static void main(String[] args){
+	String price1='100000';
+	String price2='100000';
+	int price11=Integer.valueOf(price1)+Integer.valueOf(price2);
+	Integer.parseInt(price1)
+	System.out.println("primitive int="+variable);
+	Integer variable2=100;
+	int varible=100;
+	Demo object=new Demo();
+	System.out.println(object);
+     System.out.println("Wrapper Variable"+variable2);
+    }
+}
+-----------------------------------------------
+//Collection
+import java.util.*;
+public static void main(String[] args){
+	ArrayList<String> list1=new ArrayList<String>();
+	list1.add("Thanu");
+	list1.add("Priya');
+	System.out.println(list1[0]);
+	}
+------------------------------------------------------------
+//iterator
+import java.util.*;
+public static void main(String[] args){
+	ArrayList<String> list1=new ArrayList<String>();
+	list1.add("Thanu");
+	list1.add("Priya');
+	System.out.println(list1[0]);
+	Iterator it=list1.iterator();
+	while(it.hasNext()){
+		System.out.println(it.next());
+	}
+-------------------------------------------------------------------------------------------------------------------
+//StringBuffer
+import java.util.*;
+public static void main(String[] args){
+	String value='Thanu';
+	StringBuffer value1=new StringBuffer();
+	System.out.println(value);
+}
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
