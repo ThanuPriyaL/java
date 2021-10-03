@@ -599,10 +599,6 @@ public class cat extends Animal{
 -------------------------------------------------------------------------------------------
 //Day4
 
-
-}
-
-------------------------------------
 package com.company;
 
 public class New extends cat{
