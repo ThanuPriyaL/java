@@ -1,0 +1,55 @@
+package com.company;
+
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner ip = new Scanner(System.in);
+
+        Map<String, Map> Student = new HashMap<>();
+        ArrayList<String> list = new ArrayList<>();
+        System.out.println("Enter the number of students you want:");
+        int n = ip.nextInt();
+        for (int j = 0; j < n; j++) {
+            System.out.println("Enter "+(j+1)+" student information ");
+            System.out.println("Enter usn number : ");
+            String id = ip.next();
+            list.add(id);
+
+            Map<String, ArrayList> StudentInfo = new HashMap<>();
+
+            for (int i = 0; i < 1; i++) {
+                ArrayList<String> list1 = new ArrayList<>();
+
+                System.out.println("Enter name: ");
+                String name = ip.next();
+                list1.add(name);
+
+                System.out.println("Enter college: ");
+                String college = ip.next();
+                list1.add(college);
+
+                System.out.println("Enter Branch: ");
+                String branch = ip.next();
+                list1.add(branch);
+
+                System.out.println("Enter age : ");
+                String age = ip.next();
+                list1.add(age);
+
+                System.out.println("Enter place: ");
+                String place = ip.next();
+                list1.add(place);
+                StudentInfo.put(list.get(j),list1);
+            }
+            Student.put(list.get(j),StudentInfo);
+        }
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            String usn = (String) it.next();
+            System.out.println(Student.get(usn));
+        }
+    }
+}

@@ -1,0 +1,74 @@
+package com.company;
+
+import java.util.HashMap;
+import java.util.Scanner;
+    public class Ticket implements TicketInterface{
+    HashMap<String,HashMap>ticket=new HashMap<String,HashMap>();
+    Scanner ip=new Scanner(System.in);
+
+    public void option(){
+        while(true){
+            System.out.println("1.Book\n2.Remove\n3.Details\n4.Exit");
+            System.out.println("please chose your option");
+            int option = ip.nextInt();
+            switch(option){
+                case 1:bookTicket();
+                        break;
+                case 2:removeTicket();
+                    break;
+                case 3:getDetailsTicket();
+                    break;
+                case 4:System.exit(0);
+                    break;
+                default:
+                    System.out.println("choose the correct option");
+            }
+        }
+    }
+        public void bookTicket(){
+            System.out.println("enter your Ticket id");
+            String id=ip.next();
+            HashMap<String,String>ticketInfo=new HashMap<String,String>();
+            System.out.println("Enter Place");
+            ticketInfo.put("departure_place",ip.next());
+            System.out.println("Enter Destination Place");
+            ticketInfo.put("destination_place",ip.next());
+            System.out.println("Enter your name");
+            ticketInfo.put("Name",ip.next());
+            System.out.println("Enter Age");
+            ticketInfo.put("Age",ip.next());
+            ticket.put(id,ticketInfo);
+        }
+        public void getDetailsTicket() {
+            System.out.println("enter your Ticket id");
+            String id = ip.next();
+            if (ticket.containsKey(id)) {
+                HashMap ticketInfo = ticket.get(id);
+                    System.out.println("Depature place:" + ticketInfo.get("departure_place"));
+                    System.out.println("Destination place:" + ticketInfo.get("destination_place"));
+                    System.out.println("Name:" + ticketInfo.get("Name"));
+                    System.out.println("Age:" + ticketInfo.get("Age"));
+                }
+            else{
+                System.out.println("Enter correct ticket id");
+            }
+        }
+            public void removeTicket () {
+                System.out.println("Ticket Id");
+                String id = ip.next();
+                ticket.remove(id);
+            }
+        public static void main(String[] args) {
+            Ticket obj=new Ticket();
+            obj.option();
+    }
+}
+//interface
+package com.company;
+
+public interface TicketInterface {
+    public void option();
+    public void bookTicket();
+    public void getDetailsTicket();
+    public void removeTicket();
+}
